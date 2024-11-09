@@ -16,6 +16,6 @@ public class WEAreLoginTests extends WEAreBaseWebTest {
                 WEAreTestData.STANDARD_USER_USERNAME.getValue(),
                 WEAreTestData.STANDARD_USER_PASSWORD.getValue()
         );
-        // Assert expected page navigated
+        // Assert expected page navigated TODO
     }
 }

@@ -25,4 +25,6 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
         // Add an assertion to verify post creation
         System.out.println("New post created successfully with message: " + message);
     }
+    // Assert TODO
+
 }
