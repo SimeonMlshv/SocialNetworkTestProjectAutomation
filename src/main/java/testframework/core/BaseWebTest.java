@@ -18,10 +18,10 @@ public abstract class BaseWebTest {
     }
 
 
-    @AfterAll
-    public static void afterAll() {
-        driver().quit();
-    }
+//    @AfterAll
+//    public static void afterAll() {
+//        driver().quit();
+//    }
 
     @AfterEach
     public void afterEach() {
