@@ -22,20 +22,20 @@ public class WEAreBaseWebTest extends BaseWebTest {
         driver().get(PropertiesManager.getConfigProperties().getProperty("WEAreBaseUrl"));
 
     }
-    @BeforeAll
-    public static void beforeAll() {
-        // perform some code before all tests start
-    }
-    @AfterEach
-    public void afterTest() {
-        driver().close();
-        // perform some code after each test has finished
-    }
-    @AfterAll
-    public static void afterAll() {
-
-        // perform some code after all tests have finished
-    }
+//    @BeforeAll
+//    public static void beforeAll() {
+//        // perform some code before all tests start
+//    }
+//    @AfterEach
+//    public void afterTest() {
+//        driver().close();
+//        // perform some code after each test has finished
+//    }
+//    @AfterAll
+//    public static void afterAll() {
+//
+//        // perform some code after all tests have finished
+//    }
     public void authenticateWithUser() {
         // Retrieve username and password from the enum
         String username = WEAreTestData.STANDARD_USER_USERNAME.getValue();

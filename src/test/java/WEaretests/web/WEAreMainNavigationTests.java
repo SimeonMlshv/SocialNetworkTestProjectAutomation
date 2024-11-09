@@ -3,6 +3,7 @@ package WEaretests.web;
 import WEaretests.core.WEAreBaseWebTest;
 import WEaretests.enums.WEAreTestData;
 import com.WEАre.pages.WEAreMainNavigationPage;
+import jdk.jfr.Label;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -27,6 +28,7 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
     }
 
     @Test
+    @Label("Jira SNT-19")
     public void createNewPost() {
         // Use the Main Navigation Page to create a new post
         String message = WEAreTestData.NEW_POST_MESSAGE.getValue() + " - " + System.currentTimeMillis() / (1000 * 60); // Unique message
