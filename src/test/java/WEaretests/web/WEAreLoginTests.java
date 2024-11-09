@@ -17,23 +17,22 @@ import static testframework.DriverManager.driver;
 public class WEAreLoginTests extends WEAreBaseWebTest {
 
     @Test
-    @Label("SNT-16")
+    @Label("JIRA SNT-16")
     public void userAuthenticated_when_validCredentialsProvided(){
-        // Navigate to Login Page
-        loginPage.navigate();
         // Submit login form
         loginPage.submitLoginForm(
                 WEAreTestData.STANDARD_USER_USERNAME.getValue(),
                 WEAreTestData.STANDARD_USER_PASSWORD.getValue()
         );
-        // Assert expected page navigated TODO
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement logoutButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//a[normalize-space()='LOGOUT']")));
 
         if (logoutButton.isDisplayed()) {
-            System.out.println("Logout button is visible after login");
+            System.out.println("Logout button is visible after login.");
         }
-        Assertions.assertTrue(logoutButton.isDisplayed(), "Expected the logout button to be displayed, but it is not.");
+        Assertions.assertTrue(logoutButton.isDisplayed(),
+                "Expected the logout button to be displayed, but it is not.");
     }
 }

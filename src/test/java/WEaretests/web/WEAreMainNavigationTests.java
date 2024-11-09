@@ -31,7 +31,8 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
     @Label("Jira SNT-19")
     public void createNewPost() {
         // Use the Main Navigation Page to create a new post
-        String message = WEAreTestData.NEW_POST_MESSAGE.getValue() + " - " + System.currentTimeMillis() / (1000 * 60); // Unique message
+        // Unique message
+        String message = WEAreTestData.NEW_POST_MESSAGE.getValue() + " - " + System.currentTimeMillis() / (1000 * 60);
         mainNavigationPage.submitMessageToANewPost(message);
 
         // Wait until the new post is visible using custom Driver's wait
