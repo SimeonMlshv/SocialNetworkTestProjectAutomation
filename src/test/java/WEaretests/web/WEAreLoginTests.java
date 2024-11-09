@@ -2,6 +2,7 @@ package WEaretests.web;
 
 import WEaretests.core.WEAreBaseWebTest;
 import WEaretests.enums.WEAreTestData;
+import com.WEАre.pages.WEAreLoginPage;
 import jdk.jfr.Label;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,8 @@ import java.time.Duration;
 import static testframework.DriverManager.driver;
 
 public class WEAreLoginTests extends WEAreBaseWebTest {
+
+
 
     @Test
     @Label("JIRA SNT-16")
@@ -34,5 +37,18 @@ public class WEAreLoginTests extends WEAreBaseWebTest {
         }
         Assertions.assertTrue(logoutButton.isDisplayed(),
                 "Expected the logout button to be displayed, but it is not.");
+    }
+
+    @Test
+    @Label("JIRA SNT-21")
+    public void register_newUser_when_validCredentialsProvided(){
+        loginPage.createNewUser();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("/html/body/div[1]/div[2]/div/div/h1")));
+
+        Assertions.assertTrue(successMessage.isDisplayed(), "Registration success message is not displayed.");
+        Assertions.assertEquals("Welcome to our community.", successMessage.getText(), "Success message text does not match.");
+
     }
 }

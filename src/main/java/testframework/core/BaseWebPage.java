@@ -5,10 +5,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import testframework.Driver;
 import testframework.DriverManager;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 public abstract class BaseWebPage {
     private final String pageUrl;
-
-    // Url
 
     public abstract String getBasePageUrl();
 

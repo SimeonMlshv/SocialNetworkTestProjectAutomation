@@ -14,4 +14,7 @@ public class WEAreBasePage extends BaseWebPage {
     public String getBasePageUrl() {
         return PropertiesManager.getConfigProperties().getProperty("WEAreBaseUrl");
     }
+    public String getEmail(String email){
+        return PropertiesManager.getConfigProperties().getProperty("email");
+    }
 }
