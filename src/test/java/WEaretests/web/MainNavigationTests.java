@@ -2,7 +2,7 @@ package WEaretests.web;
 
 import WEaretests.core.WEAreBaseWebTest;
 import WEaretests.enums.WEAreTestData;
-import com.WEАre.pages.WEAreMainNavigationPage;
+import com.WEАre.pages.MainNavigationPage;
 import jdk.jfr.Label;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static testframework.DriverManager.driver;
 
-public class WEAreMainNavigationTests extends WEAreBaseWebTest {
+public class MainNavigationTests extends WEAreBaseWebTest {
 
-    private WEAreMainNavigationPage mainNavigationPage;
+    private MainNavigationPage mainNavigationPage;
 
     @BeforeEach
     @Override
@@ -24,7 +24,7 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
         super.beforeTests();
         authenticateWithUser();
         // Instantiate the main navigation page with the custom Driver instance
-        mainNavigationPage = new WEAreMainNavigationPage(driver);
+        mainNavigationPage = new MainNavigationPage(driver);
     }
     @Test
     @Label("Jira SNT-19")

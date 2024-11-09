@@ -1,8 +1,7 @@
 package WEaretests.web;
 
 import WEaretests.core.WEAreBaseWebTest;
-import com.WEАre.pages.WEAreLatestPostsPage;
-import com.WEАre.pages.WEAreMainNavigationPage;
+import com.WEАre.pages.LatestPostsPage;
 import jdk.jfr.Label;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,9 +15,9 @@ import java.time.Duration;
 
 import static testframework.DriverManager.driver;
 
-public class WEAreLatestPostsTests extends WEAreBaseWebTest {
+public class LatestPostsTests extends WEAreBaseWebTest {
     private final By dislikePostButtonLocator = By.xpath("//input[@id='submit-val69']");
-    private WEAreLatestPostsPage latestPostsPage;
+    private LatestPostsPage latestPostsPage;
 
     @BeforeEach
     @Override
@@ -26,7 +25,7 @@ public class WEAreLatestPostsTests extends WEAreBaseWebTest {
         super.beforeTests();
         authenticateWithUser();
         // Instantiate the main navigation page with the custom Driver instance
-        latestPostsPage = new WEAreLatestPostsPage(driver);
+        latestPostsPage = new LatestPostsPage(driver);
     }
     @Test
     @Label("JIRA SNT-20")

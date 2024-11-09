@@ -2,7 +2,6 @@ package WEaretests.web;
 
 import WEaretests.core.WEAreBaseWebTest;
 import WEaretests.enums.WEAreTestData;
-import com.WEАre.pages.WEAreLoginPage;
 import jdk.jfr.Label;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,7 @@ import java.time.Duration;
 
 import static testframework.DriverManager.driver;
 
-public class WEAreLoginTests extends WEAreBaseWebTest {
+public class LoginTests extends WEAreBaseWebTest {
 
     @Test
     @Label("JIRA SNT-16")

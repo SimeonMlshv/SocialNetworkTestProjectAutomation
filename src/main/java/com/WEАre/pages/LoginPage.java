@@ -4,10 +4,10 @@ import com.WEАre.Utils.TestDataGenerator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class WEAreLoginPage extends WEAreBasePage {
+public class LoginPage extends BasePage {
 
 
-    public WEAreLoginPage() {
+    public LoginPage() {
         super("/");
     }
 

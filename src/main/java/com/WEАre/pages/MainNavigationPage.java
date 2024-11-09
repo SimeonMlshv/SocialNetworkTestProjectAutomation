@@ -5,7 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import testframework.Driver;
 
-public class WEAreMainNavigationPage extends WEAreBasePage {
+public class MainNavigationPage extends BasePage {
     private final Driver driver;  // Custom Driver instance
 
     // Locators
@@ -14,7 +14,7 @@ public class WEAreMainNavigationPage extends WEAreBasePage {
     private final By savePostButtonLocator = By.xpath("/html/body/section[1]/div/div/div/div/ul/div/form/div[3]/input");
 
     // Constructor that accepts custom Driver instance
-    public WEAreMainNavigationPage(Driver driver) {
+    public MainNavigationPage(Driver driver) {
         super("/");  // Calls the constructor of WEAreBasePage with the page URL
         this.driver = driver;  // Assign the passed custom Driver to the class-level variable
     }

@@ -3,19 +3,12 @@ package com.WEАre.pages;
 import com.WEАre.Utils.TestDataGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import testframework.Driver;
 
-import java.time.Duration;
-
-import static testframework.DriverManager.driver;
-
-public class WEAreLatestPostsPage extends WEAreBasePage{
+public class LatestPostsPage extends BasePage {
     private final Driver driver;
-    public WEAreLatestPostsPage(Driver driver) {
+    public LatestPostsPage(Driver driver) {
         super("/posts");
         this.driver = driver;
     }

@@ -3,10 +3,10 @@ package com.WEАre.pages;
 import testframework.PropertiesManager;
 import testframework.core.BaseWebPage;
 
-public class WEAreBasePage extends BaseWebPage {
+public class BasePage extends BaseWebPage {
 
     //тук си викаме метода за базовия URL
-    public WEAreBasePage(String pageSpecificUrl) {
+    public BasePage(String pageSpecificUrl) {
         super(pageSpecificUrl);
 
     }
