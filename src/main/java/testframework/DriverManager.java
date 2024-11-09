@@ -14,7 +14,7 @@ import testframework.enums.FrameworkSettings;
 
 public class DriverManager {
     private static final Logger LOGGER = LogManager.getRootLogger();
-    private static Driver driver;
+    public static Driver driver;
 
     public static void quitDriver() {
         if (driver != null) {

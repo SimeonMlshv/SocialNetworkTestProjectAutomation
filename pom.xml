@@ -108,5 +108,6 @@
             <artifactId>selenium-devtools-v130</artifactId>
             <version>4.26.0</version>
         </dependency>
+
     </dependencies>
 </project>
