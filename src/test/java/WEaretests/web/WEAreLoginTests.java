@@ -44,9 +44,8 @@ public class WEAreLoginTests extends WEAreBaseWebTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("/html/body/div[1]/div[2]/div/div/h1")));
-
         Assertions.assertTrue(successMessage.isDisplayed(), "Registration success message is not displayed.");
-        Assertions.assertEquals("Welcome to our community.", successMessage.getText(), "Success message text does not match.");
-
+        Assertions.assertEquals("Welcome to our community.", successMessage.getText(),
+                "Success message text does not match.");
     }
 }

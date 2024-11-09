@@ -56,4 +56,10 @@ public class WEAreLatestPostsTests extends WEAreBaseWebTest {
         WebElement dislikePostButton = driver().findElement(dislikePostButtonLocator);
         dislikePostButton.click();
     }
+    @Test
+    @Label("JIRA SNT-22")
+    public void writeCommentToExistingPost() {
+        latestPostsPage.commentOnExistingPost();
+
+    }
 }
