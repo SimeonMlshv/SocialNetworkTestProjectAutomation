@@ -28,7 +28,6 @@ public class WEAreLatestPostsTests extends WEAreBaseWebTest {
         // Instantiate the main navigation page with the custom Driver instance
         latestPostsPage = new WEAreLatestPostsPage(driver);
     }
-
     @Test
     @Label("JIRA SNT-20")
     public void LikeDislikePost() {

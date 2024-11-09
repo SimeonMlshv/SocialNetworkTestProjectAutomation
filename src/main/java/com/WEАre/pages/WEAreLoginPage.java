@@ -55,6 +55,6 @@ public class WEAreLoginPage extends WEAreBasePage {
         repeatPasswordInput.sendKeys("Test123456");
         WebElement submitRegisterButton = driver().findElement(submitRegisterButtonLocator);
         submitRegisterButton.click();
-        System.out.println("User registered successfully with username: " + uniqueUsername + " and password: " + "Test123456!");
+        System.out.println("User registered successfully with username: " + uniqueUsername + " and password: " + "Test123456");
     }
 }

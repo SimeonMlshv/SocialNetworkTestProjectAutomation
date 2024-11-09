@@ -26,7 +26,6 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
         // Instantiate the main navigation page with the custom Driver instance
         mainNavigationPage = new WEAreMainNavigationPage(driver);
     }
-
     @Test
     @Label("Jira SNT-19")
     public void createNewPost() {
@@ -37,8 +36,7 @@ public class WEAreMainNavigationTests extends WEAreBaseWebTest {
 
         // Wait until the new post is visible using custom Driver's wait
         driver.getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("(//*[contains(text(), '" + message + "')])[last()]")
-        ));
+                By.xpath("(//*[contains(text(), '" + message + "')])[last()]")));
 
         // Find the element containing the newly created post message
         WebElement newPostElement = mainNavigationPage.findElementByMessage(message);

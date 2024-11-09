@@ -17,8 +17,6 @@ import static testframework.DriverManager.driver;
 
 public class WEAreLoginTests extends WEAreBaseWebTest {
 
-
-
     @Test
     @Label("JIRA SNT-16")
     public void userAuthenticated_when_validCredentialsProvided(){
