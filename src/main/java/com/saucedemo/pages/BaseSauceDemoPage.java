@@ -9,5 +9,7 @@ public class BaseSauceDemoPage extends BaseWebPage {
     }
 
     @Override
-    public String getBasePageUrl() { return PropertiesManager.getConfigProperties().getProperty("sauceDemoBaseUrl"); }
+    public String getBasePageUrl() {
+        return PropertiesManager.getConfigProperties().getProperty("sauceDemoBaseUrl");
+    }
 }

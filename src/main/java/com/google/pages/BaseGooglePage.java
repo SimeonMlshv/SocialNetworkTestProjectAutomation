@@ -10,5 +10,6 @@ public class BaseGooglePage extends BaseWebPage {
     }
 
     @Override
-    public String getBasePageUrl() { return PropertiesManager.getConfigProperties().getProperty("googleBaseUrl"); }
+    public String getBasePageUrl() {
+        return PropertiesManager.getConfigProperties().getProperty("googleBaseUrl"); }
 }
