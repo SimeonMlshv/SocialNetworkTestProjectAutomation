@@ -1,8 +1,10 @@
 package com.WEАre.Utils;
+
 import java.util.Random;
 
-
 public class TestDataGenerator {
+
+    // Generates a unique username
     public static String generateUniqueUsername() {
         String baseUsername = "user";
         int length = 6; // Length of the random suffix
@@ -33,4 +35,34 @@ public class TestDataGenerator {
         return baseComment + " " + randomSuffix;
     }
 
+    // Generate a random title for the post
+    public static String generateRandomTitle() {
+        String[] titles = {
+                "Exciting News!",
+                "Big Announcement",
+                "Latest Updates",
+                "Breaking News",
+                "Special Offer",
+                "New Features Released"
+        };
+
+        Random random = new Random();
+        int index = random.nextInt(titles.length); // Randomly pick a title from the array
+        return titles[index];
+    }
+
+    // Generate a random body for the post
+    public static String generateRandomBody() {
+        String[] bodies = {
+                "We are excited to share this with you. Stay tuned for more details.",
+                "This is a special announcement about something big. Keep an eye out for updates.",
+                "Our team has been working hard on something new, and we're happy to share it with you.",
+                "We've launched something awesome! Check it out and let us know what you think.",
+                "A lot of great things are happening, and we want you to be part of it."
+        };
+
+        Random random = new Random();
+        int index = random.nextInt(bodies.length); // Randomly pick a body from the array
+        return bodies[index];
+    }
 }
