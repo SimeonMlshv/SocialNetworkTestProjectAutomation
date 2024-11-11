@@ -2,7 +2,7 @@ package WEaretests.web;
 
 import WEaretests.core.WEAreBaseWebTest;
 import WEaretests.enums.WEAreTestData;
-import com.WEАre.pages.MainNavigationPage;
+import com.WEАre.pages.HomePage;
 import jdk.jfr.Label;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static testframework.DriverManager.driver;
 
-public class MainNavigationTests extends WEAreBaseWebTest {
+public class HomePageTests extends WEAreBaseWebTest {
 
-    private MainNavigationPage mainNavigationPage;
+    private HomePage homePage;
 
     @BeforeEach
     @Override
@@ -24,7 +24,7 @@ public class MainNavigationTests extends WEAreBaseWebTest {
         super.beforeTests();
         authenticateWithUser();
         // Instantiate the main navigation page with the custom Driver instance
-        mainNavigationPage = new MainNavigationPage(driver);
+        homePage = new HomePage(driver);
     }
     @Test
     @Label("Jira SNT-19")
@@ -32,14 +32,14 @@ public class MainNavigationTests extends WEAreBaseWebTest {
         // Use the Main Navigation Page to create a new post
         // Unique message
         String message = WEAreTestData.NEW_POST_MESSAGE.getValue() + " - " + System.currentTimeMillis() / (1000 * 60);
-        mainNavigationPage.submitMessageToANewPost(message);
+        homePage.submitMessageToANewPost(message);
 
         // Wait until the new post is visible using custom Driver's wait
         driver.getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("(//*[contains(text(), '" + message + "')])[last()]")));
 
         // Find the element containing the newly created post message
-        WebElement newPostElement = mainNavigationPage.findElementByMessage(message);
+        WebElement newPostElement = homePage.findElementByMessage(message);
         // Add an assertion to verify post creation
         assertNotNull(newPostElement, "The new post element should not be null.");
         assertEquals(message, newPostElement.getText(), "The post message should match the expected value.");
