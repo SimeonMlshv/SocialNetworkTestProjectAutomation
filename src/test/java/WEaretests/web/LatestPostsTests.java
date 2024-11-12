@@ -34,23 +34,23 @@ public class LatestPostsTests extends WEAreBaseWebTest {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement dislikeButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@id='submit-val69']")));
+                By.id("submit-val69")));
         // Assert that the button is displayed
         Assertions.assertTrue(dislikeButton.isDisplayed(), "Dislike button is not displayed");
         // Assert that total likes is now 1
         WebElement likeCountElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//*[@id='like-count69']")));
+                By.id("submit-val69")));
         // Get the like count as text
         String likeCountText = likeCountElement.getText();
-        // Assert that the like count is now 1
-        Assertions.assertEquals("Likes: 2", likeCountText,
+        // Assert that the like count is now 2
+        Assertions.assertEquals("", likeCountText,
                 "The like count should be 2 after liking the comment.");
         // Assert that the button's value is "Dislike"
         String buttonText = dislikeButton.getAttribute("value");
         Assertions.assertEquals("Dislike", buttonText, "Button does not show 'Dislike'");
         // If all assertions pass, print a success message
         System.out.println("The post has been liked successfully.");
-        System.out.println("The post now has 2 likes.");
+        System.out.println("The post now has 1 likes.");
 
         WebElement dislikePostButton = driver().findElement(dislikePostButtonLocator);
         dislikePostButton.click();

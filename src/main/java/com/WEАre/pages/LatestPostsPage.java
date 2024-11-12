@@ -15,7 +15,7 @@ public class LatestPostsPage extends BasePage {
 
     private final By latestPostsButtonLocator = By.xpath("//a[normalize-space()='Latest Posts']");
     private final By browsePublicPostsButtonLocator = By.xpath("/html/body/section[1]/div/div/div[2]/div[1]/form/input");
-    private final By likePostButtonLocator = By.xpath("//input[@id='submit-val69']");
+    private final By likePostButtonLocator = By.id("submit-val69");
     private final By exploreThisPostButtonLocator = By.xpath(
             "//body//section[@class='ftco-section ftco-candidates ftco-candidates-2 bg-light']//div" +
                     "[@class='row']//div[@class='row']//div[1]//div[1]//div[2]//p[3]//a[1]");
