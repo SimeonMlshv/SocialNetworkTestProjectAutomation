@@ -19,6 +19,26 @@ public class TestDataGenerator {
         return baseUsername + uniqueSuffix;
     }
 
+    public static String generateRandomEmail() {
+        String emailPrefix = "user";
+        String domain = "@example.com";
+        int randomSuffix = new Random().nextInt(10000); // Generate a random number to append to the email
+        return emailPrefix + randomSuffix + domain;
+    }
+
+    public static String generateRandomPassword() {
+        int length = 8; // Length of the password
+        String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        StringBuilder password = new StringBuilder();
+
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            password.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return password.toString();
+    }
+
     // Generates a random comment
     public static String generateRandomComment() {
         String baseComment = "Deadpool 3 is a funny movie";
@@ -64,5 +84,13 @@ public class TestDataGenerator {
         Random random = new Random();
         int index = random.nextInt(bodies.length); // Randomly pick a body from the array
         return bodies[index];
+    }
+
+    public static String generateRandomImageUrl() {
+        String[] imageHosts = {"https://placeimg.com", "https://dummyimage.com"};
+        String imageHost = imageHosts[new Random().nextInt(imageHosts.length)];
+        int width = 300 + new Random().nextInt(200); // Random width between 300 and 500
+        int height = 200 + new Random().nextInt(200); // Random height between 200 and 400
+        return imageHost + "/" + width + "/" + height;
     }
 }
