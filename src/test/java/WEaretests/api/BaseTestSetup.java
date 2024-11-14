@@ -1,13 +1,15 @@
 package WEaretests.api;
 
+import com.WEАre.Utils.LoginHelper;
 import io.restassured.RestAssured;
-import org.junit.Before;
+import org.junit.BeforeClass;
 
 public class BaseTestSetup {
 
-    @Before
-    public void setup() {
+    @BeforeClass
+    public static void setupClass() {
         RestAssured.baseURI = "http://localhost";
         RestAssured.port = 8081;
+
     }
 }
