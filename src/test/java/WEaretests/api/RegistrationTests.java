@@ -35,8 +35,8 @@ public class RegistrationTests extends BaseTestSetup {
                 .statusCode(200) // Expected status code for successful registration
                 .extract().response();
 
-        String sessionCookie = response.getCookie("JSESSIONID");
-        System.out.println("Session Cookie: " + sessionCookie);
+        //String sessionCookie = response.getCookie("JSESSIONID");
+        //System.out.println("Session Cookie: " + sessionCookie);
 
         // Store the session cookie in the System or a global variable if needed
         // (Not recommended to store it globally unless it's part of a shared class in real-world scenarios)
